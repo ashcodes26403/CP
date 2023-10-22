@@ -1,0 +1,389 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Ashmit Sinha} % Your Name
+\newcommand{\course}{B.Tech} % Your Program
+\newcommand{\roll}{ME21B037} % Your Roll No.
+\newcommand{\phone}{9136274600} % Your Phone Number
+\newcommand{\emaila}{ashmitsinha.26403@gmail.com} %Email 1
+\newcommand{\emailb}{me21b037@smail.iitm.ac.in} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=2cm,clip]{IITM Logo.png}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\
+  {Roll No.: \roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {Mechanical Engineering} &  \href{https://github.com/ashcodes26403}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+  {Indian Institute Of Technology Madras} & \href{https://www.yourLinkedinProfile.com/in/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology Madras}{CGPA: 7.52/10}
+      {Bachelor of Technology in Mechanical Engineering }{Nov 2021 – Present}
+    \resumeSubheading
+      {The Kalyani School, Pune}{Percentage: 95.0\%}
+      {Central Board of Secondary Eduction, Class XII}{Apr 2020 – Mar 2021}
+    \resumeSubheading
+      {The Kalyani School, Pune}{Percentage: 96.2\%} 
+      {Central Board of Secondary Education, Class X}{Apr 2018 – Mar 2019}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+%-----------Achievements-----------------
+\section{\textbf{Scholastic Achievements}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{JEE Advance: } % Award
+    {Secured an All India Rank of 2045 out of 0.2M candidates that appeared for the exam.} % Event
+    {}
+\resumePOR{JEE Mains: } % Award
+    {Secured an All India Rank of 2664 out of the 1M students that appeared for the exam.} % Event
+    {}
+\resumePOR{BITSAT: } % Award
+    {Among the top 200 in the country to clear BITSAT in 2021, among 50,000+ candidates.} % Event
+    {}
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+\setlength{\footskip}{4.08003pt}
+
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Research Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Mathematics Department, IIT Madras}{IIT Madras}
+      {Guide: Dr. Sivaram Ambikasaran(Dept. of Mathematics), Dr. Prashant LA(Dept. of Computer Science)}{May’23-Present}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Work description line 1}
+    \item {Work description line 2}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheading
+      {Robert Bosch Centre for Data Science and Artificial Intelligence}{IIT Madras}
+      {Guide: Shivani Singh, Dr. Balaram Ravindran(Dept. of Computer Science)}{Nov 22’-Jan 23’}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Work description line 1}
+    \item {Work description line 2}
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Technical Club Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {AI Club, IIT Madras} %Project Name
+      {Using Reinforcement learning to assist in virtual home tasks} %Project Name, Location Name
+      {May 22’-Mar 23'} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: xxx,xxx}
+        \item {More description on the project(The output you achieved by working on the project)}
+    \resumeItemListEnd
+    \vspace{-1.0mm}
+    
+    \resumeProject
+      {Finance Club, IIT Madras X Graviton LLP} %Project Name
+      {Alpha Research} %Project Name, Location Name
+      {Jun 23’ -Sept 23’} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: xxx,xxx}
+        \item {More description on the project(The output you achieved by working on the project)}
+    \resumeItemListEnd
+    \vspace{-1.0mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Course Projects}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {ME2400 : Measurements, Instrumentation and Controls }{Guide: Dr. Manish Anand}
+      {PID control algorithm design to balance the pitch of a tandem rotor helicopter}{Jan’23-May’23}
+      \vspace{-1.0mm}
+      \resumeItemListStart
+    \item {Work description line 1}
+    \item {Work description line 2}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheading
+      {ME2201 : Kinematics and Dynamics of Machinery}{Guide: Dr. Manish Anand}
+      {Four bar cargo lift mechanism for a Flatbed Truck }{July’22-Nov’22}
+      \vspace{-1.0mm}
+      \resumeItemListStart
+    \item {Work description line 1}
+    \item {Work description line 2}
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Relevant Coursework}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{}{• Differential Equations ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎• Introduction to Programming • Principle of Economics} \\
+     \textbf{}{• Strength of Materials ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎• Fluid Mechanics ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ • Kinematics \& Dynamics of Machinery } \\
+     \textbf{}{• Design of Machine Elements ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎• Heat Transfer ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ • Measurements, Instrumentation \& Controls} \\
+     \textbf{}{• Manufacturing Technology ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎• Materials \& Design ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ • Energy Conversion Systems} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+    \textbf{Languages}{: Python, C++, C, Arduino} \\
+    \textbf{Libraries and Frameworks}{: Pytorch, Tensorflow, Keras, Numpy, Pandas, Matplotlib, nltk, Gym, StableBaselines-3,
+OpenCV} \\
+     \textbf{Modelling}{: Autodesk Fusion 360, AutoCAD, Solidworks} \\
+      \textbf{Soft Skills}{: Communication, Leadership, Team Management, Teamwork} \\
+     \textbf{Areas of Interest}{: Reinforcement Learning, Deep Learning, Robotics and Computer Vision} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Positions of Responsibility}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {AI Club, IIT Madras} %Project Name
+      {Project Lead} %Project Name, Location Name
+      {May 23’-Present} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: xxx,xxx}
+        \item {More description on the project(The output you achieved by working on the project)}
+    \resumeItemListEnd
+    \vspace{-1.0mm}
+    
+
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {Gesture Volume Control} %Project Name
+      {IDK?} %Project Name, Location Name
+      {Apr 23’-Jun 23'} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: xxx,xxx}
+        \item {More description on the project(The output you achieved by working on the project)}
+    \resumeItemListEnd
+    \vspace{-2mm}
+ 
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+%-----------Achievements-----------------
+\section{\textbf{Extra-Curricular}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{SAATHI Mentorship: } % Award
+    {\\-Got selected as SAATHI (Student wellness body) mentor among 200+ participants for the year 2023-24.
+    \\-Mentoring 5 freshers, conducted informal interactive meets \& guided them in solving their various problems.} % Event
+    {}
+\resumePOR{Sports: } % Award
+    {\\-Got selected in the National Sports Organisation for Basketball out of a total of 100+ participants in 2022.
+    \\-Secured second place at a district level tournament - Sports for All (SFA) in 2017.
+    \\-Represented D.A.V. Public School, Nerul at a national level tournament - D.A.V. nationals in 2018.} % Event
+    {}
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+\setlength{\footskip}{4.08003pt}
+
+
+
+
+%-------------------------------------------
+\end{document}
